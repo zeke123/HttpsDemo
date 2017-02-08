@@ -55,6 +55,8 @@ public class MainActivity extends Activity
         Log.e("zhoujian", "url==" + url);
         Log.e("zhoujian", " 是否是https请求==" + (connection instanceof HttpsURLConnection));
         if (connection instanceof HttpsURLConnection) {
+
+            //得到sslContext对象，有两种情况：1.需要安全证书，2.不需要安全证书
             SSLContext sslContext = HttpsUtil.getSSLContextWithCer();
 			 //SSLContext sslContext = HttpsUtil.getSSLContextWithoutCer();
             if (sslContext != null) {
