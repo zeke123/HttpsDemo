@@ -15,25 +15,28 @@ import java.security.UnrecoverableKeyException;
 import java.security.cert.CertificateException;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
-
 import javax.net.ssl.SSLSocketFactory;
 
-public class MainActivity extends Activity {
-
+public class MainActivity extends Activity
+{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        new Thread() {
-            public void run() {
-                try {
+        new Thread()
+        {
+            public void run()
+            {
+                try
+                {
                     getConnection();
-                } catch (Exception e) {
+                }
+                catch (Exception e)
+                {
                     e.printStackTrace();
                 }
             }
         }.start();
-
     }
 
     private void getConnection() throws IOException, KeyManagementException, NoSuchAlgorithmException,
@@ -58,7 +61,6 @@ public class MainActivity extends Activity {
 				//((HttpsURLConnection) connection).setHostnameVerifier(HttpsUtil.hostnameVerifier);
             }
         }
-
         int responseCode = connection.getResponseCode();
         Log.e("zhoujian", "responseCode==" + responseCode);
         if (responseCode == 200) {
