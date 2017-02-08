@@ -3,7 +3,6 @@ package com.zhoujian.https;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -46,7 +45,7 @@ public class MainActivity extends Activity
 
         // https://github.com/zeke123/ConstraintLayout
         // http://my.csdn.net/my/mycsdn
-        URL url = new URL("https://github.com/zeke123/ConstraintLayout");
+        URL url = new URL("http://my.csdn.net/my/mycsdn");
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setConnectTimeout(5 * 1000);
         connection.setReadTimeout(5 * 1000);

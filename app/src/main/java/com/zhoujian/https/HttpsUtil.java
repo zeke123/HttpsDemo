@@ -35,6 +35,8 @@ public class HttpsUtil
 	 * @throws UnrecoverableKeyException
 	 * @throws KeyManagementException
 	 */
+
+
 	public static SSLContext getSSLContextWithCer() throws NoSuchAlgorithmException, IOException, CertificateException,
 			KeyStoreException, UnrecoverableKeyException, KeyManagementException {
         // 实例化SSLContext
@@ -74,8 +76,10 @@ public class HttpsUtil
 		sslContext.init(kMFactory.getKeyManagers(), tmFactory.getTrustManagers(), new SecureRandom());
 		inStream.close();
 		return sslContext;
-
 	}
+
+
+
 
 	/**
 	 *
@@ -84,7 +88,7 @@ public class HttpsUtil
 	 * @throws NoSuchAlgorithmException
 	 * @throws KeyManagementException
 	 */
-	@SuppressLint("TrulyRandom")
+
 	public static SSLContext getSSLContextWithoutCer() throws NoSuchAlgorithmException, KeyManagementException {
 		// 实例化SSLContext
 		// 这里参数可以用TSL 也可以用SSL
