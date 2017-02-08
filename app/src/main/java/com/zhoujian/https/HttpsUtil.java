@@ -21,7 +21,8 @@ import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
 import android.annotation.SuppressLint;
 
-public class HttpsUtil {
+public class HttpsUtil
+{
 	/**
 	 *
 	 * 
@@ -44,7 +45,6 @@ public class HttpsUtil {
 
 		CertificateFactory cerFactory = CertificateFactory.getInstance("X.509");
 		Certificate cer = cerFactory.generateCertificate(inStream);
-
 
 		KeyStore keyStory = KeyStore.getInstance("PKCS12");
 
@@ -98,6 +98,7 @@ public class HttpsUtil {
 			return new X509Certificate[0];
 		}
 	};
+
 
 	public static HostnameVerifier hostnameVerifier = new HostnameVerifier() {
 
