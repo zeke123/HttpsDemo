@@ -38,6 +38,7 @@ public class MainActivity extends Activity
                 }
             }
         }.start();
+
     }
 
     private void getConnection() throws IOException, KeyManagementException, NoSuchAlgorithmException,
